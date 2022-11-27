@@ -19,13 +19,13 @@ p {
     font-size: 75%;
 }
 
-.memoryContainer {
+.board-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.memoryGrid {
+.grid {
     display: flex;
     flex-wrap: wrap;
     width: 300px;
