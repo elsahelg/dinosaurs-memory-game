@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     //images for cards
-    const cardArray = [
-        {
+    const cardArray = [{
             name: 'acanthopholis',
             img: 'assets/images/acanthopholis.jpg'
         },
@@ -52,7 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ]
 
+   
+
     const grid = document.querySelector('.grid')
+    const scoreDisplay = document.querySelector('.score')
+    var cardsClicked = []
+    var cardsClickedId = []
+    var cardsMatch = []
 
     //generate memory board
     function generateBoard() {
@@ -65,20 +70,42 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+
     //flip cards   
-    function flipCard(){
+    function flipCard() {
         var cardId = this.getAttribute('data-id')
-        cardsChosen.push(cardArray[cardId].name)
-        cardsChosenId.push(cardId)
+        cardsClicked.push(cardArray[cardId].name)
+        cardsClickedId.push(cardId)
         this.setAttribute('src', cardArray[cardId].img)
-        if (cardsChosen.length === 2) {
-            setTimeout(checkMatch, 600)
+        if (cardsClicked.length === 2) {
+            setTimeout(checkMatch, 500)
         }
     }
-  
-    //check chosen cards for match     function cardsMatch()
+
+    //check chosen cards for match     
+    function checkMatch() {
+        var cards = document.querySelectorAll('img')
+        const firstPickId = cardsClickedId[0]
+        const secondPickId = cardsClickedId[1]
+        if (cardsClicked[0] === cardsClicked[1]) {
+            alert('The twins match!')
+            cards[firstPickId].setAttribute('src', 'assets/images/placeholder.png')
+            cards[secondPickId].setAttribute('src', 'assets/images/placeholder.png')
+            cardsMatch.push(cardsClicked)
+        } else {
+            alert('Twins do not match, try again!')
+            cards[firstPickId].setAttribute('src', 'assets/images/card.jpeg')
+            cards[secondPickId].setAttribute('src', 'assets/images/card.jpeg')
+        }
+        cardsClicked = []
+        cardsClickedId = []
+        scoreDisplay.textContent = cardsMatch.length
+        if (cardsMatch.length === 6) {
+            scoreDisplay.textContent = 'Congratulations! All twins found!'
+        }
+    }
 
 
-    generateBoard() 
+    generateBoard()
 
 })
