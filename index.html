@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nerko+One&display=swap" rel="stylesheet">
     <!-- css stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Dinosaurs Memory!</title>
+
 </head>
+
 <body>
     <div class="heading">
         <h1>Dinosaurs Memory Game</h1>
     </div>
+    <button id="startGame">Start Game</button>
+    <p>Attempts: <span class="count-attempts">0</span><br> 
+        Twins found: <span class="count-match">0</span></p>
     <div class="memoryContainer">
-        <button id="startGame">Start Game</button>
         <div class="memoryGrid">
         </div>
-        <p>Attempts: <span class="count-attempts"></span> Twins found: <span class="count-match"></span></p>
     </div>
+
     <!-- javascript -->
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
