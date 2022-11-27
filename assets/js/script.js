@@ -60,16 +60,25 @@ document.addEventListener('DOMContentLoaded', () => {
             var card = document.createElement('img')
             card.setAttribute('src', 'assets/images/card.jpeg')
             card.setAttribute('data-id', i)
-            // card.addEventListener('click', flipCard)
+            card.addEventListener('click', flipCard)
             grid.appendChild(card)
         }
     }
 
-    generateBoard()
-
-    //flip cards   function flipCard()
+    //flip cards   
+    function flipCard(){
+        var cardId = this.getAttribute('data-id')
+        cardsChosen.push(cardArray[cardId].name)
+        cardsChosenId.push(cardId)
+        this.setAttribute('src', cardArray[cardId].img)
+        if (cardsChosen.length === 2) {
+            setTimeout(checkMatch, 600)
+        }
+    }
   
     //check chosen cards for match     function cardsMatch()
 
+
+    generateBoard() 
 
 })
