@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const grid = document.querySelector('.grid')
     const scoreDisplay = document.querySelector('.score')
+    const textAlertDisplay = document.querySelector('.text-alert')
     var cardsClicked = []
     var cardsClickedId = []
     var cardsMatch = []
@@ -78,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cardsClickedId.push(cardId)
         this.setAttribute('src', cardArray[cardId].img)
         if (cardsClicked.length === 2) {
-            setTimeout(checkMatch, 500)
+            setTimeout(checkMatch, 600)
         }
     }
 
@@ -88,12 +89,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const firstPickId = cardsClickedId[0]
         const secondPickId = cardsClickedId[1]
         if (cardsClicked[0] === cardsClicked[1]) {
-            alert('The twins match!')
+            textAlertDisplay.textContent = "It's a match! Keep going!"
             cards[firstPickId].setAttribute('src', 'assets/images/placeholder.png')
             cards[secondPickId].setAttribute('src', 'assets/images/placeholder.png')
             cardsMatch.push(cardsClicked)
         } else {
-            alert('Twins do not match, try again!')
+            textAlertDisplay.textContent = "Sorry, no match! Try again!"
             cards[firstPickId].setAttribute('src', 'assets/images/card.jpeg')
             cards[secondPickId].setAttribute('src', 'assets/images/card.jpeg')
         }
@@ -101,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cardsClickedId = []
         scoreDisplay.textContent = cardsMatch.length
         if (cardsMatch.length === 6) {
-            scoreDisplay.textContent = 'Congratulations! All twins found!'
+            textAlertDisplay.textContent = 'Congratulations! You found all twins!'
         }
     }
 
