@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ]
 
-   
+    cardArray.sort (() => 0.5 - Math.random())
 
     const grid = document.querySelector('.grid')
     const scoreDisplay = document.querySelector('.score')
