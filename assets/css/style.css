@@ -9,14 +9,34 @@ body {
     
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:active {
+    color: black;
+}
+
+a:after {  
+    text-decoration: none;
+    color: black;
+}
+
 button {
     font-family: 'Nerko One', cursive;
     font-size: 100%;
     margin: 10px;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: rgba(57, 145, 38, 0.505);
+}
+button:hover {
+    opacity: 0.7;
 }
 
 p {
-    font-size: 75%;
+    font-size: 100%;
 }
 
 .board-container {
@@ -30,4 +50,9 @@ p {
     flex-wrap: wrap;
     width: 300px;
     height: 400px;
+    cursor: pointer;
+}
+
+.grid img:hover {
+    opacity: 0.7;
 }

@@ -49,16 +49,16 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'tyrannosaurusrex',
             img: 'assets/images/tyrannosaurusrex.jpg'
         }
-    ]
+    ];
 
-    cardArray.sort (() => 0.5 - Math.random())
+    cardArray.sort (() => 0.5 - Math.random());
 
-    const grid = document.querySelector('.grid')
-    const scoreDisplay = document.querySelector('.score')
-    const textAlertDisplay = document.querySelector('.text-alert')
-    var cardsClicked = []
-    var cardsClickedId = []
-    var cardsMatch = []
+    const grid = document.querySelector('.grid');
+    const scoreDisplay = document.querySelector('.score');
+    const textAlertDisplay = document.querySelector('.text-alert');
+    var cardsClicked = [];
+    var cardsClickedId = [];
+    var cardsMatch = [];
 
     //generate memory board
     function generateBoard() {
@@ -69,8 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card.addEventListener('click', flipCard)
             grid.appendChild(card)
         }
-    }
-
+    };
 
     //flip cards   
     function flipCard() {
@@ -81,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (cardsClicked.length === 2) {
             setTimeout(checkMatch, 600)
         }
-    }
+    };
 
     //check chosen cards for match     
     function checkMatch() {
@@ -90,8 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const secondPickId = cardsClickedId[1]
         if (cardsClicked[0] === cardsClicked[1]) {
             textAlertDisplay.textContent = "It's a match! Keep going!"
-            cards[firstPickId].setAttribute('src', 'assets/images/placeholder.png')
-            cards[secondPickId].setAttribute('src', 'assets/images/placeholder.png')
             cardsMatch.push(cardsClicked)
         } else {
             textAlertDisplay.textContent = "Sorry, no match! Try again!"
@@ -104,9 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (cardsMatch.length === 6) {
             textAlertDisplay.textContent = 'Congratulations! You found all twins!'
         }
-    }
+    };
 
-
-    generateBoard()
+    generateBoard();
 
 })
