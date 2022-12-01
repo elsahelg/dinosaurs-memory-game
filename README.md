@@ -47,4 +47,8 @@ Dinosaurs Memory Game is a game to help children improve there memory along with
   - The footer features the games rules to provide for the user while playing the memory game
  <br><img src="assets/images/footer-rules.png"><br>
 
+### Features left to implement 
+
+- 
+
 

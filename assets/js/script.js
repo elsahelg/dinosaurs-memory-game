@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             var card = document.createElement('img');
             card.setAttribute('src', 'assets/images/card.jpeg');
             card.setAttribute('data-id', i);
+            card.setAttribute('alt', 'cardArrey.name');
             card.addEventListener('click', flipCard);
             grid.appendChild(card);
         }
