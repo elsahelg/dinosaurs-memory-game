@@ -68,3 +68,13 @@ Dinosaurs Memory Game is a game to help children improve there memory along with
 
 ### Bugs
 - Running through DevTools lighthouse I desovered that the images did not contain an alt attribute. I fixed this bug by adding the code setAttribute to the images in the javascript file. 
+
+## Deplyment 
+The site was deployed to GitHub pages by following the steps listed below:
+
+1. I navigated to 'My Repositories' in GitHub and selected the 'Bella_Art_Gallery' Repository
+2. From the tab bar I opened 'Settings' and navigated to 'Pages' from the leftside menu
+3. I selected 'Deploy from branch' from the 'Source' drop-down meny
+4. Below I selected the 'Main' branch and saved by clicking the 'Save' button
+
+The deployment was successful! [Visit the deployed site here](https://elsahelg.github.io/dinosaurs-memory-game/)
