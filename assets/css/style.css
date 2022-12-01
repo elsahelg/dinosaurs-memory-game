@@ -1,5 +1,5 @@
 body {
-    background: rgba(57, 145, 38, 0.505);
+    background: rgba(57, 145, 38);
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
@@ -51,5 +51,6 @@ p {
 }
 
 footer {
-    background-color: rgba(57, 145, 38, 0.505);
+    width: 300px;
+    font-size: 75%;
 }
