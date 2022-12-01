@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cardsClickedId.push(cardId)
         this.setAttribute('src', cardArray[cardId].img)
         if (cardsClicked.length === 2) {
-            setTimeout(checkMatch, 600)
+            setTimeout(checkMatch, 400)
         }
     };
 
