@@ -78,3 +78,12 @@ The site was deployed to GitHub pages by following the steps listed below:
 4. Below I selected the 'Main' branch and saved by clicking the 'Save' button
 
 The deployment was successful! [Visit the deployed site here](https://elsahelg.github.io/dinosaurs-memory-game/)
+
+## Credits
+
+## Content
+- The code to implement the main structure of the memory game board is credited to [Ania Kubów](https://www.youtube.com/watch?v=tjyDOHzKN0w&t=302s)
+
+## Media
+- The images of the memory cards are taken from Freepik and credited to [macrovector](https://www.freepik.com/free-vector/isometric-colored-dinosaurs-set_26764158.htm#page=2&query=dinosaurs&position=47&from_view=search&track=sph)
+- The image for the back of the cards is credited to [Freepik](https://www.freepik.com/free-vector/hand-drawn-baby-dinosaur-illustrated_13861993.htm#page=6&query=dino&position=23&from_view=search&track=sph) 
