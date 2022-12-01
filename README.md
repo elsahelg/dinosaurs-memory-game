@@ -1,6 +1,6 @@
 # Dinosaurs Memory Game
 Dinosaurs Memory Game is a game to help children improve there memory along with having fun. The memory cards is also provided with information about the names of the different dinosaurs with the aim to educate children while playing the game. The memory board provides 12 cards containing dublettes of 6 different dinosaurs. The goal with the game is to find the dinosaur twins and pair them together.
-<img src="assets/images/dinosaurs-responsive.png">
+<img src="assets/images/responsive-memory.png">
 
 ## Features
 
@@ -42,5 +42,9 @@ Dinosaurs Memory Game is a game to help children improve there memory along with
 - Restart the game
   - When the user is ready, the button to shuffle the cards is always ready to allow the user to restart the game
  <br><img src="assets/images/button-shuffle.png"><br>
+
+- Footer
+  - The footer features the games rules to provide for the user while playing the memory game
+ <br><img src="assets/images/footer-rules.png"><br>
 
 
